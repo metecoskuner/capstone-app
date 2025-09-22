@@ -1,17 +1,19 @@
-import './App.css';
-import Header from './Header';
+import React from 'react';
 import Nav from './Nav';
 import Main from './Main';
-import Footer from './Footer';
 
 function App() {
   return (
-    <>
-      <Header />
+    <div className="container">
+      <header>
+        <h1>Little <span>Lemon</span></h1>
+      </header>
       <Nav />
       <Main />
-      <Footer />
-    </>
+      <footer>
+        <p>&copy; 2025 Little Lemon. <a href="#contact">Contact Us</a></p>
+      </footer>
+    </div>
   );
 }
 

@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Genel Container */
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header */
+header {
+  background-color: #f4ce14;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #495e57;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+header span {
+  font-weight: 600;
+}
+
+/* Navigation */
+nav {
+  background-color: #495e57;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #f4ce14;
+  color: #333;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+}
+
+main h2, main h3, main h4, main h5, main h6 {
+  color: #495e57;
+  margin-bottom: 1rem;
+}
+
+main h2 { font-size: 2rem; }
+main h3 { font-size: 1.75rem; }
+main h4 { font-size: 1.5rem; }
+main h5 { font-size: 1.25rem; }
+main h6 { font-size: 1rem; }
+
+main p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+main span {
+  font-weight: 600;
+  color: #f4ce14;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: #f4ce14;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Görseller */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
 }
