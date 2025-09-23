@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav>
-      <a href="#home" className="active">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Contact</a>
+      <Link to="/">Home</Link>
+      <Link to="/menu">Menu</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/booking">Reservations</Link>
     </nav>
   );
 }

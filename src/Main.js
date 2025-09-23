@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import BookingPage from "./pages/BookingPage";
 
 function Main() {
   return (
     <main>
-      <h2>Reserve a <span>Table</span></h2>
-      <p>Welcome to Little Lemon! Please select a date and time.</p>
-      <h3>Opening Hours</h3>
-      <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/menu" element={<h2>Menu Page</h2>} />
+        <Route path="/contact" element={<h2>Contact Page</h2>} />
+      </Routes>
     </main>
   );
 }
