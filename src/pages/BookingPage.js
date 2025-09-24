@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import BookingForm from "./BookingForm";
 
-function BookingPage() {
+function BookingPage({ availableTimes, updateTimes, submitForm, onFormSubmit }) {
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [occasion, setOccasion] = useState("");
+
   return (
-    <section>
-      <h2>Reserve a Table</h2>
-      <p>Please select a date and time for your reservation.</p>
-    </section>
+    <div style={{ padding: "20px" }}>
+      <h1>Table Reservation</h1>
+      <BookingForm
+        date={date}
+        setDate={setDate}
+        time={time}
+        setTime={setTime}
+        guests={guests}
+        setGuests={setGuests}
+        occasion={occasion}
+        setOccasion={setOccasion}
+        availableTimes={availableTimes}
+        updateTimes={updateTimes}
+        submitForm={submitForm} 
+        onFormSubmit={onFormSubmit} // Eğer rezervasyon verilerini yerel dizide güncellemek istiyorsan
+      />
+    </div>
   );
 }
 
